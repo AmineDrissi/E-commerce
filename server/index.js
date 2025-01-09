@@ -7,10 +7,13 @@ app.use(cors())
 app.use(express.json())
 
 const userRouter = require("./routers/user.router.js")
+const categoryRouter = require("./routers/category.router.js")
+const productRouter = require("./routers/product.router.js")
 
 
 app.use("/api/users",userRouter)
-
+app.use("/api/category",categoryRouter)
+app.use("/api/product",productRouter)
 
 
 
